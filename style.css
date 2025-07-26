@@ -1,0 +1,473 @@
+.custom-select {
+  width: 200px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto 1rem auto;
+}
+.selected {
+  background: var(--preto-principal);
+  color: var(--cor-principal);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--preto-principal);
+  cursor: pointer;
+}
+.options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: var(--preto-principal);
+  border-radius: 8px;
+  border: 2px solid var(--preto-principal);
+  max-height: 8rem;
+  overflow-y: auto;
+  z-index: 10;
+}
+.option {
+  padding: 0.5rem 1rem;
+  color: var(--cor-principal);
+  cursor: pointer;
+}
+.option:hover {
+  background: var(--cor-secundaria);
+  color: var(--preto-principal);
+}
+.custom-select.open .options {
+  display: block;
+}
+:root {
+    --cor-principal: #FB9E3A;
+    --cor-secundaria: #4BAEd1;
+    --preto-principal: #1a1a1a;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;     
+}
+
+
+.cabecalho {
+    position: relative;                     
+    z-index: 10;                             
+    display: flex;                            
+    padding: 1rem 0rem 0.5rem 2rem;           
+    background-color: var(--preto-principal);               
+    box-shadow: 0px 10px 10px black;            
+    border-bottom: 2px solid black;                
+    width: 100%;                                    
+
+}
+
+
+.cabecalho__menu {
+    display: flex;                     
+    gap: 2rem;                          
+}
+
+
+.opcao {
+    color: var(--cor-principal);                           
+    font-family: 'Orbitron';                    
+    font-weight: 500;                            
+    font-size: 1.2rem;                          
+    padding: 5px 5px;                            
+    position: relative;                              
+    transition: all 0.3 ease;                        
+}
+
+
+.opcao:hover {
+    color: var(--cor-secundaria); 
+    text-shadow: 0 0 3px var(--cor-secundaria), 0 0 3px var(--cor-principal);             
+    
+}
+
+
+.opcao::after {
+    content: '';                         
+    position: absolute;                   
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;                           
+    background: var(--cor-secundaria);                      
+    transform: scaleX(0);                        
+    transform-origin: left;                      
+    transition: transform 0.3s ease;             
+}
+
+.opcao:hover::after {
+    transform: scaleX(1);                  
+}
+
+ body {
+    min-height: 100vh;
+    background-color: var(--cor-principal);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    font-family: 'Orbitron';
+    font-weight: 500;
+    flex: 1;
+}
+
+.conteudo__inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 60%;
+    margin: 8rem auto;
+    padding: 1rem;
+}
+
+.texto__principal h1 {
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+
+}
+
+.texto__secundario {
+    font-size: 1.1rem;
+}
+
+strong {
+    color: var(--cor-secundaria);
+}
+
+.destaque {
+    color: var(--cor-secundaria);
+    border-bottom: 1px solid var(--cor-secundaria);
+    font-weight: 500;
+}
+
+.icon__ninja {
+    text-align: center;
+    width: 25rem;
+}
+
+.redes__sociais {
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
+
+.social__icon {
+    color: var(--cor-secundaria);
+    transition: transform 0.3s;
+}
+
+.social__icon:hover {
+    transform: scale(1.5);
+}
+
+.rodape {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: auto;
+    background: var(--preto-principal);
+}
+
+.rodape_text {
+    text-align: center;
+    font-family: 'Orbitron';
+    font-weight: 500;
+    color: var(--cor-principal);
+    margin: 0;
+}
+
+
+.shuriken {
+    position: absolute;                   
+    z-index: 1;                              
+    top: 0.8rem;                            
+    right: -3rem;                       
+    width: 22rem;                            
+    animation: girar 3s linear infinite;   
+}
+
+.kunai__titulo {
+    position: absolute;
+    width: 9rem;
+    transform: rotate(45deg);
+    display: flex;
+    left: 8rem;
+    top: 20rem;
+}
+
+/* Página de Batalha */
+
+.texto__batalha {
+    font-family: 'Orbitron';
+    margin: 2rem auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.titulo__com__shuriken {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shuriken__titulo {
+    width: 2rem;
+    height: 2rem;
+    animation: girar 3s linear infinite;
+}
+
+.batalha__seletores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14rem;
+    margin: 0;
+}
+
+.seletor__bloco {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    
+}
+
+.seletor__personagem {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: var(--cor-principal);
+    background: var(--preto-principal);
+    border: 2px solid var(--preto-principal);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 0.2rem 1.5rem;
+    outline: none;
+    cursor: pointer;
+    transition: height 0.3s ease;
+    max-height: 8rem;
+    overflow-y: auto;
+}
+
+
+.img__personagem {
+    width: 16rem;
+    height: 16rem;
+    padding: 0;
+    object-fit: contain;
+    display: block;
+}
+
+.container__caixa {
+    position: relative;
+    margin-top: 50px;
+}
+
+.img__container {
+    background: var(--preto-principal);
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 1rem auto 0;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+    border: 2px solid var(--cor-principal);
+}
+
+.caixa__analise {
+    background: var(--preto-principal);
+    color: var(--cor-principal);
+    border-radius: 12px;
+    min-height: 10rem;
+    width: 30rem;
+    margin-top: 0;
+    max-height: 30rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'arial', sans-serif;
+    font-size: 1.2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+    
+}
+
+.btn__analise {
+    position: relative;
+    z-index: 1;
+    top: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background: var(--preto-principal);
+    color: var(--cor-principal);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    font-family: 'orbitron';
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn__analise:hover {
+    background-color:  #3d3d3d;
+}
+
+.arte__1 {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: -1;
+    width: 36%;
+    animation: girar_artes 9s linear infinite;  
+}
+
+.arte__3 {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: -1;
+    width: 36%;
+    animation: girar_artes 9s linear infinite; 
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);                    
+    }
+
+    to {
+        transform: rotate(360deg);                  
+    }
+}
+
+@keyframes girar_artes {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1500px) {
+
+    .conteudo__inicio {
+        padding-top: 8rem;
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+    }
+
+    .icon__ninja {
+        width: 20rem;
+    }
+
+    .batalha__seletores {
+        padding: 3rem;
+        gap: 2rem;
+    }
+
+    .seletor__bloco {
+        width: 100%;
+        align-items: center;
+    }
+
+    .img__personagem {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .caixa__analise {
+        width: 90%;
+        max-height: 40vh;
+        margin: 1rem auto;
+    }
+
+    .shuriken {
+        width: 16rem;
+    }
+
+    .kunai__titulo {
+       display: none;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 900px) {
+
+
+    .conteudo__inicio {
+        padding-top: 8rem;
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+    }
+
+    .icon__ninja {
+        width: 20rem;
+    }
+
+    .batalha__seletores {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .seletor__bloco {
+        width: 100%;
+        align-items: center;
+    }
+
+    .img__personagem {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .caixa__analise {
+        width: 90%;
+        max-height: 40vh;
+        margin: 1rem auto;
+    }
+
+    .shuriken {
+        width: 16rem;
+    }
+
+    .kunai__titulo {
+       display: none;
+    }
+
+    .redes__sociais {
+        gap: 3rem;
+    }
+
+    .titulo__com__shuriken {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+    
+}
