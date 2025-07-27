@@ -75,8 +75,8 @@ window.addEventListener('DOMContentLoaded', () => {
 botaoAnalisar.disabled = true
 
  // Configuração da API do Gemini
-const API_KEY = 'AIzaSyBToRsoZT6CVNu49R5IV-KBaaA9BXA1mPo';
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
+const API_KEY = '';
+const API_URL = ``;
 
  // Função para chamar a API do Gemini
 async function consultarGemini(prompt) {
