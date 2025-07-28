@@ -22,4 +22,6 @@ Um site interativo inspirado no universo de Naruto, onde você pode simular bata
 
 Esse é o meu primeiro projeto sendo feito do zero, irei fazendo atualizações conforme eu vou avançando meu aprendizado.
 
+Link do projeto em execução: https://naruto-battle-ai-ovng.vercel.app/
+
 <div align="center"> Feito por [Eduardo] | <a href="https://github.com/EduardoDevPy">GitHub</a> | <a href="https://www.linkedin.com/in/eduardo-vieira-97a489182/">LinkedIn</a> </div> ```
