@@ -41,37 +41,7 @@
         <p>Escolha os personagens:</p>
         <div class="batalha__seletores">
           <div class="seletor__bloco">
-            <select class="seletor__personagem">
-              <option value="" disabled selected>Escolha seu personagem</option>
-              <option value="Naruto">Naruto</option>
-              <option value="Sasuke">Sasuke</option>
-              <option value="Sakura">Sakura</option>
-              <option value="Kakashi">Kakashi</option>
-              <option value="Gai">Gai</option>
-              <option value="Itachi">Itachi</option>
-              <option value="Kisame">Kisame</option>
-              <option value="Asuma">Asuma</option>
-              <option value="Pain">Pain</option>
-              <option value="Orochimaru">Orochimaru</option>
-              <option value="RockLee">Rock Lee</option>
-              <option value="Sasori">Sasori</option>
-              <option value="Deidara">Deidara</option>
-              <option value="Neji">Neji</option>
-              <option value="Jiraya">Jiraya</option>
-              <option value="Hidan">Hidan</option>
-              <option value="Hinata">Hinata</option>
-              <option value="KillerBee">Killer Bee</option>
-              <option value="Obito">Obito</option>
-              <option value="Shikamaru">Shikamaru</option>
-              <option value="Hashirama">Hashirama</option>
-              <option value="Madara">Madara</option>
-              <option value="Tobirama">Tobirama</option>
-              <option value="Minato">Minato</option>
-              <option value="Gaara">Gaara</option>
-              <option value="Kakuzu">Kakuzu</option>
-              <option value="Konan">Konan</option>
-              <option value="Shisui">Shisui</option>
-            </select>
+            <select class="seletor__personagem"></select>
             <div class="img__container">
             <img id="img__personagem__1" class="img__personagem">
             </div>
@@ -82,37 +52,7 @@
             </div>
           </div>
           <div class="seletor__bloco">
-            <select class="seletor__personagem">
-              <option value="" disabled selected>Escolha seu personagem</option>
-              <option value="Naruto">Naruto</option>
-              <option value="Sasuke">Sasuke</option>
-              <option value="Sakura">Sakura</option>
-              <option value="Kakashi">Kakashi</option>
-              <option value="Gai">Gai</option>
-              <option value="Itachi">Itachi</option>
-              <option value="Kisame">Kisame</option>
-              <option value="Asuma">Asuma</option>
-              <option value="Pain">Pain</option>
-              <option value="Orochimaru">Orochimaru</option>
-              <option value="RockLee">Rock Lee</option>
-              <option value="Sasori">Sasori</option>
-              <option value="Deidara">Deidara</option>
-              <option value="Neji">Neji</option>
-              <option value="Jiraya">Jiraya</option>
-              <option value="Hidan">Hidan</option>
-              <option value="Hinata">Hinata</option>
-              <option value="KillerBee">Killer Bee</option>
-              <option value="Obito">Obito</option>
-              <option value="Shikamaru">Shikamaru</option>
-              <option value="Hashirama">Hashirama</option>
-              <option value="Madara">Madara</option>
-              <option value="Tobirama">Tobirama</option>
-              <option value="Minato">Minato</option>
-              <option value="Gaara">Gaara</option>
-              <option value="Kakuzu">Kakuzu</option>
-              <option value="Konan">Konan</option>
-              <option value="Shisui">Shisui</option>
-            </select>
+            <select class="seletor__personagem"></select>
             <div class="img__container">
             <img id="img__personagem__2" class="img__personagem">
             </div>
@@ -126,16 +66,17 @@
         </div>
       </footer>
       <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const player = new Plyr('#player');
-  });
-</script>
+      <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const player = new Plyr('#player');
+        });
+      </script>
         <!-- jQuery (necessário para Select2) -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="selectOptionItems.js"></script>
         <!-- Select2 JS -->
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-        <script src="script.js"></script>
+        <script type="module" src="script.js"></script>
   </body>
 </html>
